@@ -1,0 +1,17 @@
+# We will use Python for cleaning the dataset
+
+
+import pandas as pd 
+df = pd.read_csv('')
+
+# Removing white space
+df.columns = df.columns.str.strip()
+
+# Drop rows that are entirely empty
+df.dropna(how='all', inplace=True)
+
+# Fill missing values temporarily (you can customize)
+df.fillna("N/A", inplace=True)
+
+# Reset index for clean DataFrame
+df.reset_index(drop=True, inplace=True)
